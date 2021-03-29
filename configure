@@ -6580,7 +6580,7 @@ enabled vdpau &&
 
 enabled crystalhd && check_lib crystalhd "stdint.h libcrystalhd/libcrystalhd_if.h" DtsCrystalHDVersion -lcrystalhd
 
-if enabled x86; then
+if enabled x86 || enabled aarch64; then
     case $target_os in
         mingw32*|mingw64*|win32|win64|linux|cygwin*)
             ;;
